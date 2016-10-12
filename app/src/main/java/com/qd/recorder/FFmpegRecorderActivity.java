@@ -1150,6 +1150,10 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 			initCameraLayout();
 
 			if(cameraSelection == CameraInfo.CAMERA_FACING_FRONT)
+				if (isFlashOn) {
+                                   isFlashOn = !isFlashOn;
+                                   flashIcon.setSelected(false);
+              		         }
 				flashIcon.setVisibility(View.GONE);
 			else{
 				flashIcon.setVisibility(View.VISIBLE);
